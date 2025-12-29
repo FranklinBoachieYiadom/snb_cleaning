@@ -3,4 +3,8 @@ npm run build
 
 # 2. Push the dist folder to the gh-pages branch
 # (This command forces the contents of dist to be the root of the gh-pages branch)
+
+
+git add dist
+git commit -m "chore: build dist for gh-pages"
 git subtree push --prefix dist origin gh-pages
