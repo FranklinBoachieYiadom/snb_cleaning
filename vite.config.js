@@ -2,10 +2,10 @@ import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
+  base: "./",
   plugins: [tailwindcss()],
   build: {
     outDir: "dist",
-    base: "/snb_cleaning/",
     rollupOptions: {
       input: {
         main: "index.html",
