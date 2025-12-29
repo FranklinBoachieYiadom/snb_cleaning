@@ -5,6 +5,7 @@ export default defineConfig({
   plugins: [tailwindcss()],
   build: {
     outDir: "dist",
+    base: "/",
     rollupOptions: {
       input: {
         main: "index.html",
