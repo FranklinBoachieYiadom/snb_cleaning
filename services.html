@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+            background-color: #020617;
+            color: #f1f5f9;
+            visibility: visible;
+        }
+    </style>
+    <title>Services | SnB </title>
+</head>
+
+<body class="bg-slate-950 text-slate-100 relative selection:bg-sky-500 selection:text-white">
+    <!-- Navigation (Same as Home) -->
+    <nav
+        class="fixed w-full z-50 transition-all duration-300 bg-slate-900/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="shrink-0 flex items-center gap-2 cursor-pointer group">
+                    <div class="rounded-tr-xl rounded-bl-xl group-hover:rotate-90 transition-transform duration-500">
+                        <img src="/images/logo.png" alt="SnB_Logo" class="w-11 h-11 rounded-full" />
+                    </div>
+                    <span class="font-bold text-2xl tracking-tight text-sky-500">Sn<span
+                            class="text-green-500">B</span></span>
+                </a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html"
+                        class="text-slate-300 hover:text-sky-400 font-medium transition-colors">Home</a>
+                    <a href="about.html"
+                        class="text-slate-300 hover:text-sky-400 font-medium transition-colors">About</a>
+                    <a href="services.html" class="text-sky-400 font-medium transition-colors">Services</a>
+                    <a href="contact.html"
+                        class="bg-sky-500 text-white px-6 py-2.5 rounded-full font-medium hover:bg-sky-600 transition-all shadow-lg hover:shadow-sky-500/30">Get
+                        In Touch</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-slate-300 hover:text-sky-400 focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-50 bg-slate-950 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center space-y-8">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-slate-400 hover:text-sky-400">
+            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <a href="index.html" class="text-2xl font-semibold text-slate-300 hover:text-sky-400">Home</a>
+        <a href="about.html" class="text-2xl font-semibold text-slate-300 hover:text-sky-400">About</a>
+        <a href="services.html" class="text-2xl font-semibold text-white hover:text-sky-400">Services</a>
+        <a href="contact.html" class="bg-sky-500 text-white px-8 py-3 rounded-full text-xl font-medium shadow-xl">Get In Touch
+            </a>
+    </div>
+
+    <!-- Page Header -->
+    <section class="bg-slate-950 pt-32 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                Our Premium Services
+            </h1>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto">
+                From cozy homes to sprawling offices, we deliver excellence in every
+                corner.
+            </p>
+        </div>
+    </section>
+
+    <!-- Detailed Services -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+            <!-- Item 1 -->
+            <div class="grid md:grid-cols-2 gap-12 items-center reveal">
+                <div
+                    class="order-2 md:order-1 relative h-100 rounded-2xl overflow-hidden shadow-2xl border border-slate-800 service-carousel">
+                    <!-- Carousel Images -->
+                    <img src="/images/residential.png" alt="Residential"
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 active" />
+                    <img src="/images/vacuum.png" alt="Vacuuming"
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" />
+                </div>
+                <div class="order-1 md:order-2 space-y-6">
+                    <div class="w-12 h-12 bg-sky-900/30 rounded-lg flex items-center justify-center text-sky-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                            </path>
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-white">Residential Cleaning</h2>
+                    <p class="text-slate-300 leading-relaxed text-lg">
+                        Come home to a space that feels brand new. Our residential team
+                        handles everything from dusting and vacuuming to deep kitchen and
+                        bathroom sanitization. We use pet-safe and family-friendly
+                        products.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-slate-300">
+                            <span
+                                class="w-5 h-5 rounded-full bg-green-900/30 text-green-400 flex items-center justify-center text-xs">✓</span>
+                            Standard & Deep Cleaning
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300">
+                            <span
+                                class="w-5 h-5 rounded-full bg-green-900/30 text-green-400 flex items-center justify-center text-xs">✓</span>
+                            Move-in / Move-out Services
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300">
+                            <span
+                                class="w-5 h-5 rounded-full bg-green-900/30 text-green-400 flex items-center justify-center text-xs">✓</span>
+                            Eco-friendly Products Available
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="grid md:grid-cols-2 gap-12 items-center reveal">
+                <div class="order-1 md:order-1 space-y-6">
+                    <div class="w-12 h-12 bg-teal-900/30 rounded-lg flex items-center justify-center text-teal-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                            </path>
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-white">Commercial Cleaning</h2>
+                    <p class="text-slate-300 leading-relaxed text-lg">
+                        A clean office is a productive office. We provide reliable
+                        cleaning for corporate spaces, retail stores, and medical
+                        facilities. Flexible scheduling ensures we never disrupt your
+                        workflow.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-slate-300">
+                            <span
+                                class="w-5 h-5 rounded-full bg-green-900/30 text-green-400 flex items-center justify-center text-xs">✓</span>
+                            Daily, Weekly, or Monthly Plans
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300">
+                            <span
+                                class="w-5 h-5 rounded-full bg-green-900/30 text-green-400 flex items-center justify-center text-xs">✓</span>
+                            Floor Care & Window Washing
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300">
+                            <span
+                                class="w-5 h-5 rounded-full bg-green-900/30 text-green-400 flex items-center justify-center text-xs">✓</span>
+                            Restroom Sanitization
+                        </li>
+                    </ul>
+                </div>
+                <!-- Item 2 Images -->
+                <div
+                    class="order-2 md:order-2 relative h-100 rounded-2xl overflow-hidden shadow-2xl border border-slate-800 service-carousel">
+                    <img src="/images/commercial.png" alt="Commercial"
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 active" />
+                    <img src="/images/industrial.png" alt="Industrial"
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" />
+                </div>
+            </div>
+
+            <!-- Item 3: Deep Sanitization -->
+            <div class="grid md:grid-cols-2 gap-12 items-center reveal">
+                <div
+                    class="order-2 md:order-1 relative h-100 rounded-2xl overflow-hidden shadow-2xl border border-slate-800 service-carousel">
+                    <img src="/images/sanitization.png" alt="Sanitization"
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 active" />
+                    <img src="/images/office_sanitization.png" alt="Office Sanitization"
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" />
+                </div>
+                <div class="order-1 md:order-2 space-y-6">
+                    <div class="w-12 h-12 bg-sky-900/30 rounded-lg flex items-center justify-center text-sky-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-white">Deep Sanitization</h2>
+                    <p class="text-slate-300 leading-relaxed text-lg">
+                        Ensure a healthy environment with our top-tier sanitization
+                        services. We focus on high-touch points and use hospital-grade
+                        disinfectants.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-slate-300">
+                            <span
+                                class="w-5 h-5 rounded-full bg-green-900/30 text-green-400 flex items-center justify-center text-xs">✓</span>
+                            Surface Disinfection
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300">
+                            <span
+                                class="w-5 h-5 rounded-full bg-green-900/30 text-green-400 flex items-center justify-center text-xs">✓</span>
+                            Advanced Fogging Technology
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+        </div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10 reveal">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                Ready to see the difference?
+            </h2>
+            <p class="text-slate-400 mb-8 text-lg">
+                Get a free quote today and let us handle the dirty work.
+            </p>
+            <a href="contact.html"
+                class="inline-block bg-sky-500 hover:bg-sky-600 text-white font-bold py-4 px-10 rounded-full transition-all shadow-lg hover:shadow-sky-500/50">Get
+                a Free Quote</a>
+        </div>
+    </section>
+
+   <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-300 py-16 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div class="col-span-1 md:col-span-1">
+          <div class="flex items-center gap-2 mb-6">
+            <div><img src="/images/logo.png" alt="SnB_Logo" class="w-11 h-11 rounded-full" /></div>
+            <span class="font-bold text-xl text-white">SnB.</span>
+          </div>
+          <p class="text-slate-400">
+            Making the world cleaner, one space at a time. Professional,
+            reliable, and eco-friendly.
+          </p>
+        </div>
+        <div>
+          <h5 class="text-white font-bold mb-4">Company</h5>
+          <ul class="space-y-2">
+            <li>
+              <a href="about.html" class="hover:text-sky-400 transition-colors">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-sky-400 transition-colors">Services</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-sky-400 transition-colors">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-white font-bold mb-4">Services</h5>
+          <ul class="space-y-2">
+            <li>
+              <a href="services.html" class="hover:text-sky-400 transition-colors">Residential</a>
+            </li>
+            <li>
+              <a href="services.html" class="hover:text-sky-400 transition-colors">Commercial</a>
+            </li>
+            <li>
+              <a href="services.html" class="hover:text-sky-400 transition-colors">Sanitization</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-white font-bold mb-4">Contact</h5>
+          <ul class="space-y-2">
+            <li>addo@snbcleanings.com</li>
+            <li>+233 53 952 3674</li>
+            <li>Greater Accra, Ashaiman</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-slate-900 pt-8 text-center text-slate-500 text-sm">
+        &copy; 2025 SnB Cleaning Services. All rights reserved. <br> Designed by Phlashly
+      </div>
+    </div>
+  </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

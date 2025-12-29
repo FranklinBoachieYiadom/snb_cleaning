@@ -1,0 +1,6 @@
+# 1. Build the project (creates the dist folder)
+npm run build
+
+# 2. Push the dist folder to the gh-pages branch
+# (This command forces the contents of dist to be the root of the gh-pages branch)
+git subtree push --prefix dist origin gh-pages
