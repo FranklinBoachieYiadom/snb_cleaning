@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [tailwindcss()],
   build: {
     outDir: "dist",
-    base: "/",
+    base: "/snb_cleaning/",
     rollupOptions: {
       input: {
         main: "index.html",
