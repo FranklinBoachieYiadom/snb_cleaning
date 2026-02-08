@@ -1,3 +1,6 @@
+# To run dev server
+npm run dev
+
 # 1. Build the project (creates the dist folder)
 npm run build
 
@@ -5,6 +8,12 @@ npm run build
 # (This command forces the contents of dist to be the root of the gh-pages branch)
 
 
+## First push to your normal repo
+git add .
+git commit -m "Add message here"
+git push -u origin main 
+
+## Now push to the displayed repo 
 git add dist
 git commit -m "chore: build dist for gh-pages"
 git subtree push --prefix dist origin gh-pages
