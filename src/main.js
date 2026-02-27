@@ -86,6 +86,9 @@ async function sendMail(e) {
   if (e && e.preventDefault) e.preventDefault();
   initEmailJS();
 
+  const submitBtn = document.getElementById("submit-btn");
+  const originalBtnText = submitBtn?.textContent || "Send Message";
+
   const first_name = document.getElementById("first_name")?.value || "";
   const last_name = document.getElementById("last_name")?.value || "";
   const email = document.getElementById("email")?.value || "";
@@ -118,6 +121,12 @@ async function sendMail(e) {
     return;
   }
 
+  // Disable button and change text to sending state
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending message...";
+  }
+
   try {
     await window.emailjs.send(
       EMAILJS_SERVICE_ID,
@@ -129,7 +138,7 @@ async function sendMail(e) {
       icon: "success",
       title: "Message sent — thank you!",
       showConfirmButton: false,
-      timer: 1500
+      timer: 1500,
     });
     //alert("Message sent — thank you!");
     // clear form
@@ -137,7 +146,17 @@ async function sendMail(e) {
     if (form) form.reset();
   } catch (err) {
     console.error("EmailJS error", err);
-    alert("Failed to send message. Please try again later.");
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Failed to send message. Please try again later.",
+    });
+  } finally {
+    // Re-enable button and restore original text
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalBtnText;
+    }
   }
 }
 
@@ -149,5 +168,3 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   if (form) form.addEventListener("submit", sendMail);
 });
-
-
